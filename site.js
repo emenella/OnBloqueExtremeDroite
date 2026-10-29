@@ -106,7 +106,7 @@ chrome.runtime.onMessage.addListener(async (msg) => {
   if (msg.type === "halt") return stop("Pause : " + (msg.reason || "erreur"), true);
   if (msg.type === "next") {
     setState("run", "Profil traité ✓");
-    await sleep(1000);
+    await sleep(rand(500, 1000));
     const d = findBtn(DONE);
     if (d) d.click();
     await countdown(rand(1500, 3000)); // délai humain entre deux profils
