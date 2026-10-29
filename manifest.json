@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Bloqueur – onbloquelextremedroite",
+  "version": "0.1.0",
+  "description": "Enchaîne l'ouverture des profils du site et le blocage sur X, Instagram, TikTok, Facebook.",
+  "permissions": ["storage"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html" },
+  "content_scripts": [
+    { "matches": ["https://onbloquelextremedroite.fun/*"], "js": ["site.js"] },
+    {
+      "matches": [
+        "https://x.com/*", "https://twitter.com/*",
+        "https://*.instagram.com/*", "https://*.tiktok.com/*",
+        "https://*.facebook.com/*", "https://*.youtube.com/*"
+      ],
+      "js": ["blocker.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
