@@ -1,0 +1,33 @@
+# Système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (si tu ajoutes web-ext, un linter, etc.)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Paquets et builds de l'extension
+dist/
+build/
+web-ext-artifacts/
+*.zip
+*.crx
+*.xpi
+
+# Clé de signature de l'extension (ne jamais publier)
+*.pem
+
+# Secrets et variables d'environnement
+.env
+.env.*
+
+# Logs
+*.log
